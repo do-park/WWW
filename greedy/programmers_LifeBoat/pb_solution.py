@@ -3,8 +3,7 @@ def solution(people, limit):
     answer = 0
     left, right = 0, len(people) - 1
     while left < right:
-        boat = people[left] + people[right]
-        if boat <= limit:
+        if people[left] + people[right] <= limit:
             left += 1
         answer += 1
         right -= 1
